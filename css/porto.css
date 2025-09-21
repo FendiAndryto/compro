@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
 }
+
 :root {
   --brand: #314984;
   --dark: #092032;
@@ -17,7 +18,9 @@ body {
   color: var(--body);
   line-height: 1.7;
 }
-
+img {
+  width: 100%;
+}
 h1,
 h2,
 h3,
@@ -364,7 +367,6 @@ footer .social-icons a {
   background: rgba(255, 255, 255, 0.2);
   color: white;
   border: none;
-  font-size: 30px;
   cursor: pointer;
   padding: 10px 15px;
   border-radius: 50%;
@@ -396,4 +398,60 @@ footer .social-icons a {
     font-size: 20px;
     padding: 8px 12px;
   }
+}
+
+.portfolio-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+}
+
+.portfolio-card .carousel {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.navbar-toggler {
+  border: 1px solid var(--dark);
+  border-radius: 4px;
+  padding: 4px 8px;
+  background-color: transparent;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(49, 73, 132, 0.25);
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  background: transparent;
+  border: none;
+  position: relative;
+}
+
+.navbar-toggler-icon::before {
+  content: "\2630";
+  font-size: 1.2em;
+  color: var(--dark);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bg-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
