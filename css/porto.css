@@ -308,7 +308,6 @@ footer .social-icons a {
 }
 
 .carousel-inner img {
-  height: 300px !important;
   object-fit: cover;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -386,10 +385,6 @@ footer .social-icons a {
 }
 
 @media (max-width: 768px) {
-  .carousel-inner img {
-    height: 250px !important;
-  }
-
   .modal-content-custom {
     width: 95%;
   }

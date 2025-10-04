@@ -39,7 +39,6 @@ function loadPortfolioContent() {
 
 function loadCarouselImages(images) {
   const carouselInner = document.querySelector(".carousel-inner");
-  const carouselIndicators = document.querySelector(".carousel-indicators");
 
   let carouselHTML = "";
   let indicatorsHTML = "";
@@ -48,20 +47,21 @@ function loadCarouselImages(images) {
     const activeClass = index === 0 ? "active" : "";
 
     carouselHTML += `
-      <div class="carousel-item ${activeClass}">
-        <img src="${image}" class="d-block w-100" alt="Portfolio Image ${
+            <div class="carousel-item ${activeClass}">
+                <img src="${image}" class="d-block w-100" alt="Portfolio Image ${
       index + 1
     }" onclick="openModal(this.src, 'portfolioCarousel')">
-      </div>
-    `;
+            </div>
+        `;
 
+    const activeAttribute = index === 0 ? 'aria-current="true"' : "";
     indicatorsHTML += `
-      <li data-target="#portfolioCarousel" data-slide-to="${index}" class="${activeClass}"></li>
-    `;
+            <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="${index}" class="${activeClass}" ${activeAttribute} aria-label="Slide ${
+      index + 1
+    }"></button>
+        `;
   });
 
   carouselInner.innerHTML = carouselHTML;
-  carouselIndicators.innerHTML = indicatorsHTML;
 }
-
 document.addEventListener("DOMContentLoaded", loadPortfolioContent);
