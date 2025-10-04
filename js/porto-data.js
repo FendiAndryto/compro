@@ -228,7 +228,7 @@ function generateCategorySection(categoryType, projects) {
 
       sectionHTML += `
         <div class="col-md portfolio-card">
-          <div id="${carouselId}" class="carousel slide" data-ride="carousel">
+          <div id="${carouselId}" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
       `;
 
@@ -243,22 +243,10 @@ function generateCategorySection(categoryType, projects) {
 
       sectionHTML += `
             </div>
-            <ol class="carousel-indicators">
-      `;
-
-      project.images.forEach((_, index) => {
-        const activeClass = index === 0 ? "active" : "";
-        sectionHTML += `
-          <li data-target="#${carouselId}" data-slide-to="${index}" class="${activeClass}"></li>
-        `;
-      });
-
-      sectionHTML += `
-            </ol>
-            <a class="carousel-control-prev" href="#${carouselId}" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#${carouselId}" role="button" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             </a>
-            <a class="carousel-control-next" href="#${carouselId}" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#${carouselId}" role="button" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </a>
           </div>

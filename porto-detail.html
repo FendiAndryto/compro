@@ -129,32 +129,34 @@
               <div
                 id="portfolioCarousel"
                 class="carousel slide"
-                data-ride="carousel"
+                data-bs-ride="carousel"
               >
                 <div class="carousel-inner"></div>
-                <ol class="carousel-indicators"></ol>
-                <a
+                <button
                   class="carousel-control-prev"
-                  href="#portfolioCarousel"
-                  role="button"
-                  data-slide="prev"
+                  type="button"
+                  data-bs-target="#portfolioCarousel"
+                  data-bs-slide="prev"
                 >
                   <span
                     class="carousel-control-prev-icon"
                     aria-hidden="true"
                   ></span>
-                </a>
-                <a
+                  <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button
                   class="carousel-control-next"
-                  href="#portfolioCarousel"
-                  role="button"
-                  data-slide="next"
+                  type="button"
+                  data-bs-target="#portfolioCarousel"
+                  data-bs-slide="next"
                 >
                   <span
                     class="carousel-control-next-icon"
                     aria-hidden="true"
                   ></span>
-                </a>
+                  <span class="visually-hidden">Next</span>
+                </button>
               </div>
             </div>
             <div class="portfolio-content mt-4" id="porto-content"></div>
